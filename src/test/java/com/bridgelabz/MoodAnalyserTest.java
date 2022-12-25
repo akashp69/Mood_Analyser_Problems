@@ -3,19 +3,24 @@ package com.bridgelabz;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertSame;
+
+/**
+ * Created the class for checking the test cases
+ */
+
 public class MoodAnalyserTest {
+    @Test
+    public void givenSadMoodShouldReturnSad() {
+        MoodAnalyserMain analyse = new MoodAnalyserMain("I am in sad mood");
+        String mood = analyse.analyseMood();
+        assertSame("SAD", mood);
+    }
 
     @Test
-    public void givenMoodShouldReturnHappy() {
-    /**
-    * Created  Object here for calling the methods here for testing
-    */
-        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain("I am in Happy Mood");
-    /**
-     *Created mood Variable here for store the mood message present in moodHappy method
-     **/
-        String mood = moodAnalyser.moodHappy();
-        Assert.assertEquals("HAPPY", mood);
-
+    public void givenAnyMoodShouldReturnHappy() {
+        MoodAnalyserMain analyse = new MoodAnalyserMain("I am in any mood");
+        String mood = analyse.analyseMood();
+        assertSame("HAPPY", mood);
     }
 }
