@@ -1,6 +1,6 @@
 package com.bridgelabz;
 /**
- * Using Class for TC : 1.1 : Given "I am in Sad Mood" message should return SAD .
+ * Using Class for TC : 1.1 : Given "I am in Happy Mood" message should return HAPPY .
  */
 
 public class MoodAnalyserMain {
@@ -12,11 +12,11 @@ public class MoodAnalyserMain {
     /**
      *Created a method for Sad Mood if Mood is sad then return SAD with using contains method
      */
-    public String moodSad() {
-        if (message.contains("Sad")) {
-            return "SAD";
-        } else {
+    public String moodHappy() {
+        if (message.contains("Happy")) {
             return "HAPPY";
+        } else {
+            return "Sad";
         }
     }
 }
