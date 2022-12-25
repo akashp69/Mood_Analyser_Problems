@@ -1,22 +1,35 @@
 package com.bridgelabz;
-/**
- * Using Class for TC : 1.1 : Given "I am in Happy Mood" message should return HAPPY .
- */
 
+/**
+ *Created the class for Refactor the code to take the mood message in constructor. .
+ */
 public class MoodAnalyserMain {
     private String message;
-
+    public MoodAnalyserMain() {}
     public MoodAnalyserMain(String message) {
         this.message = message;
     }
+
     /**
-     *Created a method for Sad Mood if Mood is sad then return SAD with using contains method
+     *Create a Method for take the mood in message
      */
-    public String moodHappy() {
-        if (message.contains("Happy")) {
+
+    public String analyseMood() {
+        if (this.message.contains("sad")) {
+            return "SAD";
+        }else
             return "HAPPY";
-        } else {
-            return "Sad";
-        }
+    }
+
+    /**
+     *This is Main Method is Using for calling method and  take the mood message in constructor
+     *
+     */
+
+    public static void main(String[] args) {
+        MoodAnalyserMain mood = new MoodAnalyserMain("i am sad");
+        System.out.println(mood.analyseMood());
+        MoodAnalyserMain mood2 = new MoodAnalyserMain("i am happy");
+        System.out.println(mood2.analyseMood());
     }
 }
