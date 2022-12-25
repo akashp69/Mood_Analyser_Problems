@@ -6,16 +6,16 @@ import org.junit.Test;
 public class MoodAnalyserTest {
 
     @Test
-    public void givenMoodShouldReturnSad() {
+    public void givenMoodShouldReturnHappy() {
     /**
     * Created  Object here for calling the methods here for testing
     */
-        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain("I am In a Sad Mood");
+        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain("I am in Happy Mood");
     /**
-     *Created mood Variable here for store the mood message present in moodSad method
+     *Created mood Variable here for store the mood message present in moodHappy method
      **/
-        String mood = moodAnalyser.moodSad();
-        Assert.assertEquals("SAD", mood);
+        String mood = moodAnalyser.moodHappy();
+        Assert.assertEquals("HAPPY", mood);
 
     }
 }
