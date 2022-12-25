@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 /**
- *Created the class for Repeat the code to take the i am in sad Mood  message in constructor. .
+ *Created the class for Repeat the code to take the i am in happy Mood  message in constructor. .
  */
 public class MoodAnalyserMain {
     private String message;
